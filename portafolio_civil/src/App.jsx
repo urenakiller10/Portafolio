@@ -64,7 +64,7 @@ function Home() {
           <h2> Ingeniería civil enfocada en gestión y ejecución de obras de gran escala y alto estándar de calidad</h2>
           <p>
 Con experiencia en la gestión y ejecución de proyectos residenciales, hoteleros, industriales y comerciales de gran envergadura.
-Más de 5 años liderando obras icónicas en Costa Rica, como la Torre 4 de Punta Esmeralda en Jacó, el hotel de lujo Waldorf Astoria en Guanacaste, la planta médica Abbott Medical, el complejo industrial Orchid Shell y el desarrollo mixto Cityzen con el Hotel Marriott en Heredia.
+Más de 5 años liderando obras icónicas en Costa Rica, como la Torre 4 de Punta Esmeralda en Jacó, el hotel de lujo Waldorf Astoria en Guanacaste, la planta Abbott Medical, el complejo industrial Orchid Shell y el desarrollo mixto Cityzen con el Hotel Marriott en Heredia.
 Experiencia comprobada en coordinación de múltiples equipos de trabajo, control de calidad, planificación estratégica y ejecución de acabados de alto nivel, así como en la gestión de proyectos bajo estándares internacionales en zonas francas y desarrollos de lujo.
           </p>
           <div className="buttons">
