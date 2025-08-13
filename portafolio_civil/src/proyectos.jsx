@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Proyectos.css";
+import "./proyectos.css";
 import w1 from './assets/waldorf/w1.jpg';
 import w2 from './assets/waldorf/w2.jpg';
 import w3 from './assets/waldorf/w3.jpg';
