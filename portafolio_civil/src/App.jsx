@@ -13,7 +13,7 @@ import log1 from './assets/log1.jpg';  // Ajusta la ruta y nombre según tu arch
 // Tus páginas
 import About from "./about";
 import Proyectos from "./proyectos";
-import Contact from "./contacts";
+
 
 function Navbar() {
   const location = useLocation();
