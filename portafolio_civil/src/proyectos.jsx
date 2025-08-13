@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./proyectos.css";
-import w1 from './assets/waldorf/w1.jpg';
-import w2 from './assets/waldorf/w2.jpg';
-import w3 from './assets/waldorf/w3.jpg';
-import w4 from './assets/waldorf/w4.jpg';
+import w1 from './assets/waldorf/w1.JPG';
+import w2 from './assets/waldorf/w2.JPG';
+import w3 from './assets/waldorf/w3.JPG';
+import w4 from './assets/waldorf/w4.JPG';
 import w5 from './assets/waldorf/w5.jpeg';
 
 import a1 from './assets/abbott/a1.jpeg';
