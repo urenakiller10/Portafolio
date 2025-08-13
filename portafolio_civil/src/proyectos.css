@@ -1,0 +1,329 @@
+/* Asegura que html y body ocupen toda la altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #9dc4e9; /* tu celeste */
+}
+
+/* Si usas un contenedor principal, también dale altura mínima */
+#root, .proyectos-container, .about-section {
+  min-height: 100vh; /* al menos la altura completa de la ventana */
+  background-color: #9dc4e9;
+}
+
+
+
+
+.proyectos-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Títulos */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.timeline-horizontal {
+  display: flex;
+  flex-wrap: nowrap;          /* No permite salto a la siguiente fila */
+  overflow-x: visible;        /* Sin scroll horizontal */
+  gap: 20px;
+  padding: 10px 0 10px 0;
+  justify-content: center; /* Alínealos desde la izquierda */
+  align-items: flex-start;
+  max-width: none;            /* Asegúrate que no limite el ancho */
+  width: auto;  
+             /* O asigna un ancho suficiente */
+}
+
+
+
+/* Scrollbar para navegadores Webkit (Chrome, Edge) */
+.timeline-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+.timeline-horizontal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.timeline-horizontal::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+.timeline-event {
+  flex: 0 0 200px; /* No crecer ni encoger, ancho fijo de 200px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f9fc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  position: relative;
+}
+
+/* La card dentro del evento */
+.event-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  height: 205px;
+}
+
+/* Fecha y ubicación entre las cards: debajo */
+.marker {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.2;
+  user-select: none;
+}
+
+.marker .fecha {
+  font-weight: 600;
+  display: block;
+}
+
+.marker .ubicacion {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 30px 0;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  padding: 8px 18px;
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+  background: #007bff;
+  color: white;
+}
+
+.filtros button.activo {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 10px #007bffaa;
+}
+
+/* Grid proyectos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  gap: 24px;
+  padding-bottom: 50px;
+}
+
+/* Card proyecto grande */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+    /* Tamaño más grande */
+  max-width: 450px;   /* antes quizá era 320px o auto, pon un ancho mayor */
+  min-height: 350px;  /* altura para que sea más alta */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgb(0 0 0 / 0.2);
+}
+
+/* Carousel de imagenes */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Botones prev/next */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #007bffcc;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.prev:hover, .next:hover {
+  background: #0056b3cc;
+}
+
+.prev {
+  left: 8px;
+}
+
+.next {
+  right: 8px;
+}
+
+/* Texto dentro de card */
+.card h4 {
+  margin: 14px 16px 6px 16px;
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.card p {
+  margin: 0 16px 10px 16px;
+  color: #444;
+  font-size: 1rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin: 0 16px 12px 16px;
+  padding: 4px 12px;
+  background-color: #e1ecff;
+  color: #007bff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+  user-select: none;
+}
+
+/* Botón "Ver más" */
+.ver-mas {
+  margin: 0 16px 16px 16px;
+  padding: 10px 0;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.ver-mas:hover {
+  background-color: #0056b3;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal */
+.modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  padding: 25px 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.modal p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Botón cerrar */
+.modal button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .timeline-horizontal {
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+
+  .timeline-event {
+    min-width: 160px;
+    padding: 12px 15px;
+  }
+
+  .carousel {
+    height: 140px;
+  }
+
+  .carousel img {
+    height: 140px;
+  }
+
+  .card h4 {
+    font-size: 1.1rem;
+  }
+}
+

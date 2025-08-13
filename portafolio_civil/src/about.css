@@ -1,0 +1,194 @@
+/* Contenedor padre: ocupa toda la pantalla */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Wrapper que centra */
+.about-wrapper {
+  display: flex;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
+  min-height: 100vh;
+  width: 100%;             /* <---- asegúrate que ocupe todo el ancho */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #d9e8fc; /* color celeste que muestras en la imagen */
+}
+
+/* Contenedor del contenido */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  min-height: 600px;       /* ajusta según contenido */
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+/* Perfil: imagen y texto juntos */
+.profile-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  text-align: center; /* texto a la izquierda dentro del bloque */
+  justify-content: center;
+  flex-wrap: wrap; /* para que sea responsive */
+  text-align: center;   
+}
+
+.profile-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0077cc;
+}
+
+.profile-info h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.9rem;
+  color: #005fa3;
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Competencias en cajita */
+.competencias-container {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.competencias-container h2 {
+  margin-bottom: 15px;
+  color: #005fa3;
+  font-size: 1.6rem;
+  border-bottom: 2px solid #0077cc;
+  padding-bottom: 6px;
+  width: fit-content;
+  margin-left: 0;
+}
+
+.competencias-container ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Tarjetas experiencia */
+.experiencia-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.card {
+  background: #0077cc;
+  color: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 119, 204, 0.5);
+  flex: 1 1 200px;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+  cursor: default;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Contactos: botones horizontales */
+.contactos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+.contactos a {
+  background: white;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  border-radius: 25px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.contactos a:hover {
+  background: #0077cc;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,119,204,0.4);
+}
+
+.contactos a svg {
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .competencias-container {
+    text-align: center;
+  }
+  .experiencia-cards {
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+}
+
+.experiencia-cards .card h3 {
+  color: black; /* rojo, o el color que prefieras */
+}
+
+.experiencia-cards .card {
+  height: auto !important;
+  min-height: auto !important;
+}
