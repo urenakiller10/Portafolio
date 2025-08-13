@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./about.css";
 import meImg from './assets/me.png'; // Imagen de perfil
 import { FaInstagram, FaFacebook, FaEnvelope, FaPhone } from "react-icons/fa";
 
