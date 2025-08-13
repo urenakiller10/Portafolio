@@ -18,7 +18,7 @@ import o2 from './assets/orchid/o2.jpeg';
 import c1 from './assets/cityzen/c1.jpeg';
 import c2 from './assets/cityzen/c2.jpeg';
 import c3 from './assets/cityzen/c3.jpeg';
-import c4 from './assets/cityzen/c4.jpg';
+import c4 from './assets/cityzen/c4.JPG';
 import c5 from './assets/cityzen/c5.jpeg';
 
 import e1 from './assets/esmeralda/e1.jpg';
