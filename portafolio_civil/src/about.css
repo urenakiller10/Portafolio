@@ -192,3 +192,9 @@ body, html, #root {
   height: auto !important;
   min-height: auto !important;
 }
+
+.no-link {
+  color: inherit; /* o el color que quieras */
+  text-decoration: none;
+  cursor: default;
+}

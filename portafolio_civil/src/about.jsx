@@ -13,7 +13,7 @@ export default function About() {
             <img src={meImg} alt="Foto del ingeniero" />
           </div>
           <div className="profile-info">
-            <h1>Allan Gerardo Ureña Bermúdez</h1>
+            <h1>Allan Ureña Bermúdez</h1>
             <p>
               Soy un ingeniero civil con amplia experiencia liderando proyectos de
               construcción en sectores hotelero, comercial, industria médica y
@@ -23,16 +23,17 @@ export default function About() {
           </div>
         </div>
 
-        <div className="competencias-container">
-          <h2>Competencias</h2>
-          <ul>
-            <li>Gestión y planificación de obras</li>
-            <li>Control de calidad y costos</li>
-            <li>Coordinación de equipos multidisciplinarios</li>
-            <li>Lectura e interpretación de planos</li>
-            <li>Negociación con proveedores</li>
-          </ul>
-        </div>
+<div className="competencias-container">
+  <h2>Competencias</h2>
+  <ul>
+    <li><strong>Liderazgo y gestión de equipos</strong> - experiencia coordinando y motivando a grupos de trabajo.</li>
+    <li><strong>Planificación y organización</strong> - capacidad para estructura y ejecutar proyectos de manera eficiente.</li>
+    <li><strong>Comunicación efectiva</strong> - habilidades claras y asertivas para transmitir ideas e información</li>
+    <li><strong>Resolución de problemas</strong> - enfoque analítico y creativo para encontrar soluciones.</li>
+    <li><strong>Adaptabilidad</strong> - habilidad para ajustarse a cambios y nuevos desafíos en entornos dinámicos.</li>
+  </ul>
+</div>
+
 
         <div className="experiencia-cards">
           <div className="card">
@@ -40,8 +41,9 @@ export default function About() {
             <p>de experiencia</p>
           </div>
           <div className="card">
-            <h3>+5 proyectos</h3>
-            <p>en los que fui parte</p>
+            <h3>+29 000 m²</h3>
+            <p>de construcción</p>
+           
           </div>
         </div>
 
